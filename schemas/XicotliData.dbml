@@ -1,0 +1,128 @@
+Project XicotliData_dm {
+  Note: '''
+    Modelos de datos para el proyecto **XicotliData**
+
+    Este proyecto es para hacer visibles las interacciones entre organismos
+    biologicos.
+  '''
+}
+
+Table Record {
+  id uuid [pk]
+  created_at datetime [default: `now()`]
+  modified datetime
+  datasetName char
+  Note: 'Registro general, puedes ser un taxón o un registro biológico.'
+}
+
+Table Taxon {
+  id uuid [ref: - Record.id]
+  scientificName char [not null, unique]
+  acceptedNameUsage char
+  family char
+  genus char
+  specificEpithet char
+  infraspecificEpithet char
+  taxonRank char [not null]
+  taxonomicStatus char
+  vernacularName char
+  Note: 'Guarda la información acerca de un taxón'
+}
+
+Table Occurrence {
+  id uuid [ref: - Record.id]
+  eventDate date
+  eventTime time
+  verbatimEventDay char
+  organismQuantity numeric
+  organismQuantityType char
+  recordedBy char
+  habitat text
+  islandGroup char
+  island char
+  country char
+  countryCode char(2)
+  stateProvince char
+  municipality char
+  locality char
+  verbatimLocality text 
+  decimalLatitude numeric(6)
+  decimalLongitude numeric(6)
+  geodeticDatum char
+  verbatimLatitude char
+  verbatimLongitude char
+  verbatimCoordinateSystem char
+  verbatimSRS char
+  georeferenceRemarks text
+  Note: '''
+    Concepto de registro biológico
+
+    Para nosotros este guardará los datos de fecha de colecta e lugar de colecta
+  '''
+}
+
+Table TaxonCard {
+  taxon_id uuid [ref: - Taxon.id]
+  Note: 'Ficha para una taxón'
+}
+
+Table MediaItem {
+  id uuid [pk]
+  occurrence_id uuid [ref: > Occurrence.id]
+  identifier char [note:'URI al recurso: Naturalista link y artículo DOI']
+  type char [note: 'Actualmente solo usaremos Image y Text']
+  title char 
+  dc_source text [note: 'Aqui podemos guardar la referencia al articulo']
+  created date
+  creator char
+  rightsHolder char
+  publisher char [note:'Para naturalista es Naturalista']
+  licenseUrl char [note: 'fundamental en Naturalista']
+  format char [note: 'para naturalista son image/jpeg']
+  Note: 'Se guarda la informacion de los archivos multimedia asociados a un registro'
+}
+
+Table CollectionItem {
+  occurrence_id uuid [ref: - Occurrence.id]
+  institutionCode char
+  collectionCode char
+  bibliographicCitationURIPart char
+  catalogNumber char
+  recordNumber char
+  Note: 'Se guarda la informacion del ejemplar colectado asociado a un registro'
+}
+
+Table OccurrenceIdentification {
+  taxon_id uuid [not null]
+  occurrence_id uuid [not null]
+  identifiedBy char
+  identifiedById char
+  dateIdentified timestamp
+  identificationRemarks text
+  Note: 'Asocia el registro biológico con sus identificaciones'
+}
+
+Table TaxonInteraction {
+  resource_id uuid [not null]
+  related_resource_id uuid [not null]
+  interactiontype_id uuid [not null, ref: > InteractionType.id]
+  relationshipAccordingTo char
+  relationshipEstablishedDate timestamp
+  relationshipRemarks text
+  Note: 'Registro de interaccion entre taxones'
+}
+
+Table InteractionType {
+  id uuid [pk]
+  label char
+  uri char
+  description text
+}
+
+Ref: Taxon.id < OccurrenceIdentification.taxon_id
+
+Ref: Occurrence.id < OccurrenceIdentification.occurrence_id
+
+Ref: Record.id < TaxonInteraction.resource_id
+
+Ref: Record.id < TaxonInteraction.related_resource_id
