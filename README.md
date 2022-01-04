@@ -19,7 +19,7 @@ taxon related information.
 
 ## Authors
 
-- Juan M. Barrios - jbarrios@cionabio.gob.mx
+- Juan M. Barrios - juan.barrios@conabio.gob.mx
 - Brenda Y. Bedolla-Garcia
 - Carlos A. Cultid-Medina
 - Paola A. González
