@@ -62,14 +62,14 @@ Table Occurrence {
 }
 
 Table Measurements {
-  id uuid
+  id uuid [pk]
   name char
   description text
 }
 
 Table MoF {
   record_id uuid [ref: - Record.id]
-  measurement_id uuid [ref: - Record.id]
+  measurement_id uuid [ref: - Measurements.id]
   value char
   reference text
   Note: 'Tabla de características'
