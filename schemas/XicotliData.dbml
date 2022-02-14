@@ -61,9 +61,18 @@ Table Occurrence {
   '''
 }
 
-Table TaxonCard {
-  taxon_id uuid [ref: - Taxon.id]
-  Note: 'Ficha para una taxón'
+Table Measurements {
+  id uuid
+  name char
+  description text
+}
+
+Table MoF {
+  record_id uuid [ref: - Record.id]
+  measurement_id uuid [ref: - Record.id]
+  value char
+  reference text
+  Note: 'Tabla de características'
 }
 
 Table MediaItem {
