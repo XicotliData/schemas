@@ -1,0 +1,696 @@
+digraph dbml {
+      rankdir=LR;
+      graph [fontname="helvetica", fontsize=32, fontcolor="#29235c", bgcolor="transparent"];
+      node [penwidth=0, margin=0, fontname="helvetica", fontsize=32, fontcolor="#29235c"];
+      edge [fontname="helvetica", fontsize=32, fontcolor="#29235c", color="#29235c"];
+
+      
+      
+      
+      "Record" [id="Record";label=<<TABLE BORDER="2" COLOR="#29235c" CELLBORDER="1" CELLSPACING="0" CELLPADDING="10" >
+      <TR><TD PORT="f0" WIDTH="150" BGCOLOR="#1d71b8"><font color="#ffffff"><B>       Record       </B></font></TD></TR>
+<TR><TD ALIGN="left" PORT="f1" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT"><b>id</b><FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>uuid</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f2" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">created_at<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>datetime</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f3" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">modified<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>datetime</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f4" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">datasetName<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>char</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+    </TABLE>>];
+"Taxon" [id="Taxon";label=<<TABLE BORDER="2" COLOR="#29235c" CELLBORDER="1" CELLSPACING="0" CELLPADDING="10" >
+      <TR><TD PORT="f0" WIDTH="150" BGCOLOR="#1d71b8"><font color="#ffffff"><B>       Taxon       </B></font></TD></TR>
+<TR><TD ALIGN="left" PORT="f1" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">id<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>uuid</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f2" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">scientificName<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>char</i> <b>(!)</b></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f3" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">acceptedNameUsage<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>char</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f4" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">family<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>char</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f5" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">genus<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>char</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f6" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">specificEpithet<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>char</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f7" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">infraspecificEpithet<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>char</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f8" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">taxonRank<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>char</i> <b>(!)</b></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f9" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">taxonomicStatus<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>char</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f10" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">vernacularName<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>char</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+    </TABLE>>];
+"Occurrence" [id="Occurrence";label=<<TABLE BORDER="2" COLOR="#29235c" CELLBORDER="1" CELLSPACING="0" CELLPADDING="10" >
+      <TR><TD PORT="f0" WIDTH="150" BGCOLOR="#1d71b8"><font color="#ffffff"><B>       Occurrence       </B></font></TD></TR>
+<TR><TD ALIGN="left" PORT="f1" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">id<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>uuid</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f2" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">eventDate<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>date</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f3" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">eventTime<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>time</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f4" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">verbatimEventDay<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>char</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f5" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">organismQuantity<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>numeric</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f6" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">organismQuantityType<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>char</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f7" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">recordedBy<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>char</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f8" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">habitat<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>text</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f9" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">islandGroup<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>char</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f10" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">island<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>char</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f11" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">country<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>char</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f12" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">countryCode<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>char(2)</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f13" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">stateProvince<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>char</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f14" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">municipality<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>char</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f15" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">locality<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>char</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f16" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">verbatimLocality<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>text</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f17" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">decimalLatitude<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>numeric(6)</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f18" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">decimalLongitude<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>numeric(6)</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f19" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">geodeticDatum<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>char</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f20" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">verbatimLatitude<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>char</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f21" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">verbatimLongitude<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>char</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f22" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">verbatimCoordinateSystem<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>char</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f23" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">verbatimSRS<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>char</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f24" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">georeferenceRemarks<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>text</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+    </TABLE>>];
+"Measurements" [id="Measurements";label=<<TABLE BORDER="2" COLOR="#29235c" CELLBORDER="1" CELLSPACING="0" CELLPADDING="10" >
+      <TR><TD PORT="f0" WIDTH="150" BGCOLOR="#1d71b8"><font color="#ffffff"><B>       Measurements       </B></font></TD></TR>
+<TR><TD ALIGN="left" PORT="f1" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT"><b>id</b><FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>uuid</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f2" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">name<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>char</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f3" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">description<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>text</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+    </TABLE>>];
+"MoF" [id="MoF";label=<<TABLE BORDER="2" COLOR="#29235c" CELLBORDER="1" CELLSPACING="0" CELLPADDING="10" >
+      <TR><TD PORT="f0" WIDTH="150" BGCOLOR="#1d71b8"><font color="#ffffff"><B>       MoF       </B></font></TD></TR>
+<TR><TD ALIGN="left" PORT="f1" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">record_id<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>uuid</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f2" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">measurement_id<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>uuid</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f3" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">value<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>char</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f4" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">reference<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>text</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+    </TABLE>>];
+"MediaItem" [id="MediaItem";label=<<TABLE BORDER="2" COLOR="#29235c" CELLBORDER="1" CELLSPACING="0" CELLPADDING="10" >
+      <TR><TD PORT="f0" WIDTH="150" BGCOLOR="#1d71b8"><font color="#ffffff"><B>       MediaItem       </B></font></TD></TR>
+<TR><TD ALIGN="left" PORT="f1" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT"><b>id</b><FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>uuid</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f2" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">occurrence_id<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>uuid</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f3" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">identifier<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>char</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f4" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">type<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>char</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f5" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">title<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>char</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f6" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">dc_source<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>text</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f7" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">created<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>date</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f8" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">creator<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>char</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f9" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">rightsHolder<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>char</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f10" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">publisher<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>char</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f11" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">licenseUrl<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>char</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f12" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">format<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>char</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+    </TABLE>>];
+"CollectionItem" [id="CollectionItem";label=<<TABLE BORDER="2" COLOR="#29235c" CELLBORDER="1" CELLSPACING="0" CELLPADDING="10" >
+      <TR><TD PORT="f0" WIDTH="150" BGCOLOR="#1d71b8"><font color="#ffffff"><B>       CollectionItem       </B></font></TD></TR>
+<TR><TD ALIGN="left" PORT="f1" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">occurrence_id<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>uuid</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f2" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">institutionCode<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>char</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f3" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">collectionCode<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>char</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f4" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">bibliographicCitationURIPart<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>char</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f5" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">catalogNumber<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>char</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f6" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">recordNumber<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>char</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+    </TABLE>>];
+"OccurrenceIdentification" [id="OccurrenceIdentification";label=<<TABLE BORDER="2" COLOR="#29235c" CELLBORDER="1" CELLSPACING="0" CELLPADDING="10" >
+      <TR><TD PORT="f0" WIDTH="150" BGCOLOR="#1d71b8"><font color="#ffffff"><B>       OccurrenceIdentification       </B></font></TD></TR>
+<TR><TD ALIGN="left" PORT="f1" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">taxon_id<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>uuid</i> <b>(!)</b></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f2" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">occurrence_id<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>uuid</i> <b>(!)</b></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f3" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">identifiedBy<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>char</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f4" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">identifiedById<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>char</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f5" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">dateIdentified<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>timestamp</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f6" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">identificationRemarks<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>text</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+    </TABLE>>];
+"TaxonInteraction" [id="TaxonInteraction";label=<<TABLE BORDER="2" COLOR="#29235c" CELLBORDER="1" CELLSPACING="0" CELLPADDING="10" >
+      <TR><TD PORT="f0" WIDTH="150" BGCOLOR="#1d71b8"><font color="#ffffff"><B>       TaxonInteraction       </B></font></TD></TR>
+<TR><TD ALIGN="left" PORT="f1" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">resource_id<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>uuid</i> <b>(!)</b></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f2" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">related_resource_id<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>uuid</i> <b>(!)</b></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f3" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">interactiontype_id<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>uuid</i> <b>(!)</b></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f4" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">relationshipAccordingTo<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>char</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f5" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">relationshipEstablishedDate<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>timestamp</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f6" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">relationshipRemarks<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>text</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+    </TABLE>>];
+"InteractionType" [id="InteractionType";label=<<TABLE BORDER="2" COLOR="#29235c" CELLBORDER="1" CELLSPACING="0" CELLPADDING="10" >
+      <TR><TD PORT="f0" WIDTH="150" BGCOLOR="#1d71b8"><font color="#ffffff"><B>       InteractionType       </B></font></TD></TR>
+<TR><TD ALIGN="left" PORT="f1" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT"><b>id</b><FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>uuid</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f2" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">label<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>char</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f3" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">uri<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>char</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f4" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">description<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>text</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+    </TABLE>>];
+    
+      "Taxon":f0 -> "OccurrenceIdentification":f0 [style=invis, weight=100, color=red]
+    "Taxon":f1:e -> "OccurrenceIdentification":f1:w [penwidth=3, color="#29235c", headlabel="*", taillabel="1", arrowhead="normal", arrowtail="none"]
+"Occurrence":f0 -> "OccurrenceIdentification":f0 [style=invis, weight=100, color=red]
+    "Occurrence":f1:e -> "OccurrenceIdentification":f2:w [penwidth=3, color="#29235c", headlabel="*", taillabel="1", arrowhead="normal", arrowtail="none"]
+"Record":f0 -> "TaxonInteraction":f0 [style=invis, weight=100, color=red]
+    "Record":f1:e -> "TaxonInteraction":f1:w [penwidth=3, color="#29235c", headlabel="*", taillabel="1", arrowhead="normal", arrowtail="none"]
+"Record":f0 -> "TaxonInteraction":f0 [style=invis, weight=100, color=red]
+    "Record":f1:e -> "TaxonInteraction":f2:w [penwidth=3, color="#29235c", headlabel="*", taillabel="1", arrowhead="normal", arrowtail="none"]
+"Taxon":f0 -> "Record":f0 [style=invis, weight=100, color=red]
+    "Taxon":f1:e -> "Record":f1:w [penwidth=3, color="#29235c", headlabel="1", taillabel="1", arrowhead="normal", arrowtail="none"]
+"Occurrence":f0 -> "Record":f0 [style=invis, weight=100, color=red]
+    "Occurrence":f1:e -> "Record":f1:w [penwidth=3, color="#29235c", headlabel="1", taillabel="1", arrowhead="normal", arrowtail="none"]
+"MoF":f0 -> "Record":f0 [style=invis, weight=100, color=red]
+    "MoF":f1:e -> "Record":f1:w [penwidth=3, color="#29235c", headlabel="1", taillabel="1", arrowhead="normal", arrowtail="none"]
+"MoF":f0 -> "Measurements":f0 [style=invis, weight=100, color=red]
+    "MoF":f2:e -> "Measurements":f1:w [penwidth=3, color="#29235c", headlabel="1", taillabel="1", arrowhead="normal", arrowtail="none"]
+"MediaItem":f0 -> "Occurrence":f0 [style=invis, weight=100, color=red]
+    "MediaItem":f2:e -> "Occurrence":f1:w [penwidth=3, color="#29235c", headlabel="1", taillabel="*", arrowhead="normal", arrowtail="none"]
+"CollectionItem":f0 -> "Occurrence":f0 [style=invis, weight=100, color=red]
+    "CollectionItem":f1:e -> "Occurrence":f1:w [penwidth=3, color="#29235c", headlabel="1", taillabel="1", arrowhead="normal", arrowtail="none"]
+"TaxonInteraction":f0 -> "InteractionType":f0 [style=invis, weight=100, color=red]
+    "TaxonInteraction":f3:e -> "InteractionType":f1:w [penwidth=3, color="#29235c", headlabel="1", taillabel="*", arrowhead="normal", arrowtail="none"]
+      
+    }

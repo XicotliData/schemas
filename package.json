@@ -1,0 +1,25 @@
+{
+  "name": "xd-schema",
+  "version": "0.1.0",
+  "description": "Xicotli data DB schemas",
+  "main": "index.js",
+  "scripts": {
+    "diagram": "dbml-renderer -i schemas/XicotliData.dbml -f dot -o imgs/XD.dot",
+    "create-img": "./exec_dot.sh",
+    "create-sql": "dbml2sql schemas/XicotliData.dbml -o sql/XicotliData.sql"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XicotliData/schemas.git"
+  },
+  "author": "Juan M Barrios <juan.barrios@conabio.gob.mx>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/XicotliData/schemas/issues"
+  },
+  "homepage": "https://github.com/XicotliData/schemas#readme",
+  "devDependencies": {
+    "@dbml/cli": "^2.3.1",
+    "@softwaretechnik/dbml-renderer": "^1.0.19"
+  }
+}

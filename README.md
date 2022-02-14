@@ -17,6 +17,12 @@ taxon related information.
 
 ![XicotliData schema](imgs/XicotliDataSchema.png "XicotliData Schema")
 
+## Dev utils
+
+There are some command definitions on `package.json` that can be use to update
+the schema image and sql file generation. These commands can be executed using
+`npm`.
+
 ## Authors
 
 - Juan M. Barrios - juan.barrios@conabio.gob.mx
