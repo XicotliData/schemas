@@ -63,8 +63,8 @@ digraph dbml {
 <TR><TD ALIGN="left" PORT="f3" BGCOLOR="#e7e2dd">
       <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
         <TR>
-          <TD ALIGN="LEFT">acceptedNameUsage<FONT>    </FONT></TD>
-          <TD ALIGN="RIGHT"><font><i>char</i></font></TD>
+          <TD ALIGN="LEFT">acceptedNameUsageID<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>uuid</i></font></TD>
         </TR>
       </TABLE>
     </TD></TR>
@@ -553,7 +553,7 @@ digraph dbml {
 <TR><TD ALIGN="left" PORT="f3" BGCOLOR="#e7e2dd">
       <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
         <TR>
-          <TD ALIGN="LEFT">identifiedBy<FONT>    </FONT></TD>
+          <TD ALIGN="LEFT">verbatimScientificName<FONT>    </FONT></TD>
           <TD ALIGN="RIGHT"><font><i>char</i></font></TD>
         </TR>
       </TABLE>
@@ -561,7 +561,7 @@ digraph dbml {
 <TR><TD ALIGN="left" PORT="f4" BGCOLOR="#e7e2dd">
       <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
         <TR>
-          <TD ALIGN="LEFT">identifiedById<FONT>    </FONT></TD>
+          <TD ALIGN="LEFT">identifiedBy<FONT>    </FONT></TD>
           <TD ALIGN="RIGHT"><font><i>char</i></font></TD>
         </TR>
       </TABLE>
@@ -569,12 +569,20 @@ digraph dbml {
 <TR><TD ALIGN="left" PORT="f5" BGCOLOR="#e7e2dd">
       <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
         <TR>
+          <TD ALIGN="LEFT">identifiedById<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>char</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f6" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
           <TD ALIGN="LEFT">dateIdentified<FONT>    </FONT></TD>
           <TD ALIGN="RIGHT"><font><i>timestamp</i></font></TD>
         </TR>
       </TABLE>
     </TD></TR>
-<TR><TD ALIGN="left" PORT="f6" BGCOLOR="#e7e2dd">
+<TR><TD ALIGN="left" PORT="f7" BGCOLOR="#e7e2dd">
       <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
         <TR>
           <TD ALIGN="LEFT">identificationRemarks<FONT>    </FONT></TD>
@@ -680,6 +688,8 @@ digraph dbml {
     "Record":f1:e -> "TaxonInteraction":f2:w [penwidth=3, color="#29235c", headlabel="*", taillabel="1", arrowhead="normal", arrowtail="none"]
 "Taxon":f0 -> "Record":f0 [style=invis, weight=100, color=red]
     "Taxon":f1:e -> "Record":f1:w [penwidth=3, color="#29235c", headlabel="1", taillabel="1", arrowhead="normal", arrowtail="none"]
+"Taxon":f0 -> "Taxon":f0 [style=invis, weight=100, color=red]
+    "Taxon":f3:e -> "Taxon":f1:w [penwidth=3, color="#29235c", headlabel="1", taillabel="1", arrowhead="normal", arrowtail="none"]
 "Occurrence":f0 -> "Record":f0 [style=invis, weight=100, color=red]
     "Occurrence":f1:e -> "Record":f1:w [penwidth=3, color="#29235c", headlabel="1", taillabel="1", arrowhead="normal", arrowtail="none"]
 "MoF":f0 -> "Record":f0 [style=invis, weight=100, color=red]

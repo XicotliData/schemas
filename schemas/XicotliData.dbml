@@ -18,7 +18,7 @@ Table Record {
 Table Taxon {
   id uuid [ref: - Record.id]
   scientificName char [not null, unique]
-  acceptedNameUsage char
+  acceptedNameUsageID uuid [ref: - Taxon.id]
   family char
   genus char
   specificEpithet char
@@ -104,6 +104,7 @@ Table CollectionItem {
 Table OccurrenceIdentification {
   taxon_id uuid [not null]
   occurrence_id uuid [not null]
+  verbatimScientificName char
   identifiedBy char
   identifiedById char
   dateIdentified timestamp

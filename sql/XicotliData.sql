@@ -1,6 +1,6 @@
 -- SQL dump generated using DBML (dbml-lang.org)
 -- Database: PostgreSQL
--- Generated at: 2022-02-14T17:44:17.806Z
+-- Generated at: 2022-02-28T18:31:25.255Z
 
 CREATE TABLE "Record" (
   "id" uuid PRIMARY KEY,
@@ -12,7 +12,7 @@ CREATE TABLE "Record" (
 CREATE TABLE "Taxon" (
   "id" uuid,
   "scientificName" char UNIQUE NOT NULL,
-  "acceptedNameUsage" char,
+  "acceptedNameUsageID" uuid,
   "family" char,
   "genus" char,
   "specificEpithet" char,
@@ -89,6 +89,7 @@ CREATE TABLE "CollectionItem" (
 CREATE TABLE "OccurrenceIdentification" (
   "taxon_id" uuid NOT NULL,
   "occurrence_id" uuid NOT NULL,
+  "verbatimScientificName" char,
   "identifiedBy" char,
   "identifiedById" char,
   "dateIdentified" timestamp,
@@ -112,6 +113,8 @@ CREATE TABLE "InteractionType" (
 );
 
 ALTER TABLE "Taxon" ADD FOREIGN KEY ("id") REFERENCES "Record" ("id");
+
+ALTER TABLE "Taxon" ADD FOREIGN KEY ("acceptedNameUsageID") REFERENCES "Taxon" ("id");
 
 ALTER TABLE "Occurrence" ADD FOREIGN KEY ("id") REFERENCES "Record" ("id");
 
