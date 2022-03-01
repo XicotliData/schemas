@@ -1,16 +1,16 @@
 -- SQL dump generated using DBML (dbml-lang.org)
 -- Database: PostgreSQL
--- Generated at: 2022-02-28T18:31:25.255Z
+-- Generated at: 2022-03-01T17:48:23.262Z
 
 CREATE TABLE "Record" (
   "id" uuid PRIMARY KEY,
-  "created_at" datetime DEFAULT (now()),
-  "modified" datetime,
+  "created_at" timestamp DEFAULT (now()),
+  "modified" timestamp,
   "datasetName" char
 );
 
 CREATE TABLE "Taxon" (
-  "id" uuid,
+  "id" uuid UNIQUE,
   "scientificName" char UNIQUE NOT NULL,
   "acceptedNameUsageID" uuid,
   "family" char,
@@ -23,7 +23,7 @@ CREATE TABLE "Taxon" (
 );
 
 CREATE TABLE "Occurrence" (
-  "id" uuid,
+  "id" uuid UNIQUE,
   "eventDate" date,
   "eventTime" time,
   "verbatimEventDay" char,

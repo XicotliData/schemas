@@ -21,7 +21,7 @@ digraph dbml {
       <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
         <TR>
           <TD ALIGN="LEFT">created_at<FONT>    </FONT></TD>
-          <TD ALIGN="RIGHT"><font><i>datetime</i></font></TD>
+          <TD ALIGN="RIGHT"><font><i>timestamp</i></font></TD>
         </TR>
       </TABLE>
     </TD></TR>
@@ -29,7 +29,7 @@ digraph dbml {
       <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
         <TR>
           <TD ALIGN="LEFT">modified<FONT>    </FONT></TD>
-          <TD ALIGN="RIGHT"><font><i>datetime</i></font></TD>
+          <TD ALIGN="RIGHT"><font><i>timestamp</i></font></TD>
         </TR>
       </TABLE>
     </TD></TR>

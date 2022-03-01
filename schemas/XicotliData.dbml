@@ -9,14 +9,14 @@ Project XicotliData_dm {
 
 Table Record {
   id uuid [pk]
-  created_at datetime [default: `now()`]
-  modified datetime
+  created_at timestamp [default: `now()`]
+  modified timestamp
   datasetName char
   Note: 'Registro general, puedes ser un taxón o un registro biológico.'
 }
 
 Table Taxon {
-  id uuid [ref: - Record.id]
+  id uuid [ref: - Record.id, unique]
   scientificName char [not null, unique]
   acceptedNameUsageID uuid [ref: - Taxon.id]
   family char
@@ -30,7 +30,7 @@ Table Taxon {
 }
 
 Table Occurrence {
-  id uuid [ref: - Record.id]
+  id uuid [ref: - Record.id, unique]
   eventDate date
   eventTime time
   verbatimEventDay char

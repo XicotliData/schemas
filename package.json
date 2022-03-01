@@ -4,8 +4,8 @@
   "description": "Xicotli data DB schemas",
   "main": "index.js",
   "scripts": {
-    "diagram": "dbml-renderer -i schemas/XicotliData.dbml -f dot -o imgs/XD.dot",
-    "create-img": "./exec_dot.sh",
+    "prediagram": "dbml-renderer -i schemas/XicotliData.dbml -f dot -o imgs/XD.dot",
+    "diagram": "./exec_dot.sh",
     "create-sql": "dbml2sql schemas/XicotliData.dbml -o sql/XicotliData.sql"
   },
   "repository": {
