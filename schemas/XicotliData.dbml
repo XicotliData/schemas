@@ -10,6 +10,8 @@ Project XicotliData_dm {
 Table Record {
   id uuid [pk]
   created_at timestamp [default: `now()`]
+  license char
+  reference char
   modified timestamp
   datasetName char
   Note: 'Registro general, puedes ser un taxón o un registro biológico.'
@@ -71,7 +73,7 @@ Table MoF {
   record_id uuid [ref: - Record.id]
   measurement_id uuid [ref: - Measurements.id]
   value char
-  reference text
+  bibliographicCitation text
   Note: 'Tabla de características'
 }
 

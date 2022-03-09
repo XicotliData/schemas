@@ -28,12 +28,28 @@ digraph dbml {
 <TR><TD ALIGN="left" PORT="f3" BGCOLOR="#e7e2dd">
       <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
         <TR>
+          <TD ALIGN="LEFT">license<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>char</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f4" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
+          <TD ALIGN="LEFT">reference<FONT>    </FONT></TD>
+          <TD ALIGN="RIGHT"><font><i>char</i></font></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+<TR><TD ALIGN="left" PORT="f5" BGCOLOR="#e7e2dd">
+      <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
+        <TR>
           <TD ALIGN="LEFT">modified<FONT>    </FONT></TD>
           <TD ALIGN="RIGHT"><font><i>timestamp</i></font></TD>
         </TR>
       </TABLE>
     </TD></TR>
-<TR><TD ALIGN="left" PORT="f4" BGCOLOR="#e7e2dd">
+<TR><TD ALIGN="left" PORT="f6" BGCOLOR="#e7e2dd">
       <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
         <TR>
           <TD ALIGN="LEFT">datasetName<FONT>    </FONT></TD>
@@ -376,7 +392,7 @@ digraph dbml {
 <TR><TD ALIGN="left" PORT="f4" BGCOLOR="#e7e2dd">
       <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
         <TR>
-          <TD ALIGN="LEFT">reference<FONT>    </FONT></TD>
+          <TD ALIGN="LEFT">bibliographicCitation<FONT>    </FONT></TD>
           <TD ALIGN="RIGHT"><font><i>text</i></font></TD>
         </TR>
       </TABLE>

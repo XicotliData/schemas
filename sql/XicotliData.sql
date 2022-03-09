@@ -1,10 +1,12 @@
 -- SQL dump generated using DBML (dbml-lang.org)
 -- Database: PostgreSQL
--- Generated at: 2022-03-01T17:48:23.262Z
+-- Generated at: 2022-03-09T16:37:17.915Z
 
 CREATE TABLE "Record" (
   "id" uuid PRIMARY KEY,
   "created_at" timestamp DEFAULT (now()),
+  "license" char,
+  "reference" char,
   "modified" timestamp,
   "datasetName" char
 );
@@ -59,7 +61,7 @@ CREATE TABLE "MoF" (
   "record_id" uuid,
   "measurement_id" uuid,
   "value" char,
-  "reference" text
+  "bibliographicCitation" text
 );
 
 CREATE TABLE "MediaItem" (
