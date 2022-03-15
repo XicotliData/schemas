@@ -548,8 +548,8 @@ digraph dbml {
       </TABLE>
     </TD></TR>
     </TABLE>>];
-"OccurrenceIdentification" [id="OccurrenceIdentification";label=<<TABLE BORDER="2" COLOR="#29235c" CELLBORDER="1" CELLSPACING="0" CELLPADDING="10" >
-      <TR><TD PORT="f0" WIDTH="150" BGCOLOR="#1d71b8"><font color="#ffffff"><B>       OccurrenceIdentification       </B></font></TD></TR>
+"RecordIdentification" [id="RecordIdentification";label=<<TABLE BORDER="2" COLOR="#29235c" CELLBORDER="1" CELLSPACING="0" CELLPADDING="10" >
+      <TR><TD PORT="f0" WIDTH="150" BGCOLOR="#1d71b8"><font color="#ffffff"><B>       RecordIdentification       </B></font></TD></TR>
 <TR><TD ALIGN="left" PORT="f1" BGCOLOR="#e7e2dd">
       <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
         <TR>
@@ -561,7 +561,7 @@ digraph dbml {
 <TR><TD ALIGN="left" PORT="f2" BGCOLOR="#e7e2dd">
       <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0">
         <TR>
-          <TD ALIGN="LEFT">occurrence_id<FONT>    </FONT></TD>
+          <TD ALIGN="LEFT">record_id<FONT>    </FONT></TD>
           <TD ALIGN="RIGHT"><font><i>uuid</i> <b>(!)</b></font></TD>
         </TR>
       </TABLE>
@@ -694,16 +694,14 @@ digraph dbml {
     </TD></TR>
     </TABLE>>];
     
-      "Taxon":f0 -> "OccurrenceIdentification":f0 [style=invis, weight=100, color=red]
-    "Taxon":f1:e -> "OccurrenceIdentification":f1:w [penwidth=3, color="#29235c", headlabel="*", taillabel="1", arrowhead="normal", arrowtail="none"]
-"Occurrence":f0 -> "OccurrenceIdentification":f0 [style=invis, weight=100, color=red]
-    "Occurrence":f1:e -> "OccurrenceIdentification":f2:w [penwidth=3, color="#29235c", headlabel="*", taillabel="1", arrowhead="normal", arrowtail="none"]
+      "Taxon":f0 -> "RecordIdentification":f0 [style=invis, weight=100, color=red]
+    "Taxon":f1:e -> "RecordIdentification":f1:w [penwidth=3, color="#29235c", headlabel="*", taillabel="1", arrowhead="normal", arrowtail="none"]
+"Record":f0 -> "RecordIdentification":f0 [style=invis, weight=100, color=red]
+    "Record":f1:e -> "RecordIdentification":f2:w [penwidth=3, color="#29235c", headlabel="*", taillabel="1", arrowhead="normal", arrowtail="none"]
 "Record":f0 -> "TaxonInteraction":f0 [style=invis, weight=100, color=red]
     "Record":f1:e -> "TaxonInteraction":f1:w [penwidth=3, color="#29235c", headlabel="*", taillabel="1", arrowhead="normal", arrowtail="none"]
 "Record":f0 -> "TaxonInteraction":f0 [style=invis, weight=100, color=red]
     "Record":f1:e -> "TaxonInteraction":f2:w [penwidth=3, color="#29235c", headlabel="*", taillabel="1", arrowhead="normal", arrowtail="none"]
-"Taxon":f0 -> "Record":f0 [style=invis, weight=100, color=red]
-    "Taxon":f1:e -> "Record":f1:w [penwidth=3, color="#29235c", headlabel="1", taillabel="1", arrowhead="normal", arrowtail="none"]
 "Taxon":f0 -> "Taxon":f0 [style=invis, weight=100, color=red]
     "Taxon":f3:e -> "Taxon":f1:w [penwidth=3, color="#29235c", headlabel="1", taillabel="1", arrowhead="normal", arrowtail="none"]
 "Occurrence":f0 -> "Record":f0 [style=invis, weight=100, color=red]

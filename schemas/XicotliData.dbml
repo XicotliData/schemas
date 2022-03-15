@@ -18,7 +18,7 @@ Table Record {
 }
 
 Table Taxon {
-  id uuid [ref: - Record.id, unique]
+  id uuid [unique]
   scientificName char [not null, unique]
   acceptedNameUsageID uuid [ref: - Taxon.id]
   family char
@@ -103,9 +103,9 @@ Table CollectionItem {
   Note: 'Se guarda la informacion del ejemplar colectado asociado a un registro'
 }
 
-Table OccurrenceIdentification {
+Table RecordIdentification {
   taxon_id uuid [not null]
-  occurrence_id uuid [not null]
+  record_id uuid [not null]
   verbatimScientificName char
   identifiedBy char
   identifiedById char
@@ -131,9 +131,9 @@ Table InteractionType {
   description text
 }
 
-Ref: Taxon.id < OccurrenceIdentification.taxon_id
+Ref: Taxon.id < RecordIdentification.taxon_id
 
-Ref: Occurrence.id < OccurrenceIdentification.occurrence_id
+Ref: Record.id < RecordIdentification.record_id
 
 Ref: Record.id < TaxonInteraction.resource_id
 
