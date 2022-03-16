@@ -1,6 +1,6 @@
 -- SQL dump generated using DBML (dbml-lang.org)
 -- Database: PostgreSQL
--- Generated at: 2022-03-09T16:37:17.915Z
+-- Generated at: 2022-03-16T18:03:05.811Z
 
 CREATE TABLE "Record" (
   "id" uuid PRIMARY KEY,
@@ -88,9 +88,9 @@ CREATE TABLE "CollectionItem" (
   "recordNumber" char
 );
 
-CREATE TABLE "OccurrenceIdentification" (
+CREATE TABLE "RecordIdentification" (
   "taxon_id" uuid NOT NULL,
-  "occurrence_id" uuid NOT NULL,
+  "record_id" uuid NOT NULL,
   "verbatimScientificName" char,
   "identifiedBy" char,
   "identifiedById" char,
@@ -114,8 +114,6 @@ CREATE TABLE "InteractionType" (
   "description" text
 );
 
-ALTER TABLE "Taxon" ADD FOREIGN KEY ("id") REFERENCES "Record" ("id");
-
 ALTER TABLE "Taxon" ADD FOREIGN KEY ("acceptedNameUsageID") REFERENCES "Taxon" ("id");
 
 ALTER TABLE "Occurrence" ADD FOREIGN KEY ("id") REFERENCES "Record" ("id");
@@ -130,9 +128,9 @@ ALTER TABLE "CollectionItem" ADD FOREIGN KEY ("occurrence_id") REFERENCES "Occur
 
 ALTER TABLE "TaxonInteraction" ADD FOREIGN KEY ("interactiontype_id") REFERENCES "InteractionType" ("id");
 
-ALTER TABLE "OccurrenceIdentification" ADD FOREIGN KEY ("taxon_id") REFERENCES "Taxon" ("id");
+ALTER TABLE "RecordIdentification" ADD FOREIGN KEY ("taxon_id") REFERENCES "Taxon" ("id");
 
-ALTER TABLE "OccurrenceIdentification" ADD FOREIGN KEY ("occurrence_id") REFERENCES "Occurrence" ("id");
+ALTER TABLE "RecordIdentification" ADD FOREIGN KEY ("record_id") REFERENCES "Record" ("id");
 
 ALTER TABLE "TaxonInteraction" ADD FOREIGN KEY ("resource_id") REFERENCES "Record" ("id");
 
@@ -164,6 +162,6 @@ COMMENT ON COLUMN "MediaItem"."format" IS 'para naturalista son image/jpeg';
 
 COMMENT ON TABLE "CollectionItem" IS 'Se guarda la informacion del ejemplar colectado asociado a un registro';
 
-COMMENT ON TABLE "OccurrenceIdentification" IS 'Asocia el registro biológico con sus identificaciones';
+COMMENT ON TABLE "RecordIdentification" IS 'Asocia el registro biológico con sus identificaciones';
 
 COMMENT ON TABLE "TaxonInteraction" IS 'Registro de interaccion entre taxones';
